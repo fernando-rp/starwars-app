@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+body{
+  background-image: url("https://i.pinimg.com/originals/22/2a/03/222a0332bd69330e9ac4109495a420ca.jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh !important;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  background-color: #0B0C10;
+  margin-top: 60px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home {
+  height: 700px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.carousel-img {
+  position: absolute;
+  object-fit: cover;
+  top:1;
+  left: 0;
+  min-height: 700px;
+}
+
+
+.logo{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 15px;
+  
+}
+
+.logo-sw{
+  height: 80px;
+  margin-left: 25px;    
+}
+
+.nav-link{
+  color: white !important;
+  font-size: 22px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav-link:hover{
+  color: #ffcb9a !important;
+}
+
+.card{
+  background-color: transparent !important;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.card-img-top{
+  height: 280px !important;
+  object-fit: cover;
+  border-radius: 20px;
+
+}
+
+.card-title{
+
+  color: white;
+  font-size: 18px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.text-presentation{
+  color: white;
+  margin: auto;
+  padding: 30px;
+  font-size: 22px;
+  font-weight:lighter;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+  padding-bottom: 50px;
+}
+
+.card-text{
+
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.btn .on{
+  color: rgb(5, 121, 255) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn .fa-heart {
+  color: rgb(114, 114, 114);
+}
+
+.title, .input{
+  display: flex;
+  justify-content: center;
+}
+
+.row.col-12.bg-dark{
+  height: 200px;
+}
+
+.title.name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.text-character{
+  color: white;
+  text-align: center;
+  font-family: fantasy;
+
+}
+
+.title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.input{
+  color: black;
+  text-align: center;
+  font-family: fantasy;
+
+}
+
+.dropdown{
+  
+  
+  display: flex;
+  justify-content: start;
+  
+
 }

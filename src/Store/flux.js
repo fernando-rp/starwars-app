@@ -1,4 +1,3 @@
-import { useReducer, useState } from "react";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -10,7 +9,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			character: "null",
 			starship: "null",
 			heart: "fas fa-heart",
-			likes: []
+			likes: [],
+			titulo: "hola mundo 2"
 		},
 		actions: {
 			likesUpdate: i => {

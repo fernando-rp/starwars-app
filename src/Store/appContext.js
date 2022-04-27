@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import getState from "./flux.js";
 
-export const Context = React.createContext(null);
+export const Context = createContext(null);
 
 const injectContext = PassedComponent => {
 	const StoreWrapper = props => {
-		//this will be passed as the contenxt value
 		const [state, setState] = useState(
 			getState({
 				getStore: () => state.store,
@@ -22,7 +21,7 @@ const injectContext = PassedComponent => {
 			state.actions.getCharacters();
 			state.actions.getPlanets();
 			state.actions.getStarships();
-		}, []);
+		});
 
 		return (
 			<Context.Provider value={state}>
