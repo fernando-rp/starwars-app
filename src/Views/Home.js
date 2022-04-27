@@ -1,11 +1,13 @@
 import React from "react";
 
 import Banner from "../Components/Banner";
+import Cards from "../Components/Cards";
 
 const Home = () => {
 	return (
 		<>
             <Banner/>
+            <Cards/>
 
 		</>
 	);
