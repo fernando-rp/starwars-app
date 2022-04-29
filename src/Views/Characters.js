@@ -13,13 +13,14 @@ import image7 from "../img/characters/7.jpeg"
 import image8 from "../img/characters/8.jpeg"
 import image9 from "../img/characters/9.jpeg"
 
+import ButtonFavoritos from "../Components/ButtonFavoritos";
 
 const Characters= ()=>{
 
-    const { store, actions } = useContext(Context);
+    const { store } = useContext(Context);
 	const { characters } = store;
+	const { classValue } = store;
 	const { results } = characters;
-	const { likes } = store;
 
 	const obtainImage=(index)=> {
 
@@ -52,6 +53,7 @@ const Characters= ()=>{
 		return (<img src={imageCode} className="card-img-top" alt="" />);
 	}
 
+
 	return (
 		<>
 			<div className="row row-cols-1 row-cols-lg-3 row-cols-md-2 mx-auto mb-4 mt-4">
@@ -73,35 +75,8 @@ const Characters= ()=>{
 														Ver Expendiente
 													</Link>
 												</div>
-												<div className="col-1 my-2">
-													<button type="button" className="btn btn-dark " id={index}>
-														<i
-															className={
-																likes.find(item => item === results[index].name)
-																	? "fas fa-heart on"
-																	: "fas fa-heart"
-															}
-															id={index}
-															onClick={e => {
-																const found = likes.find(
-																	element => element === results[index].name
-																);
-
-																if (found === undefined || found === null) {
-																	actions.addLikes(e);
-																	e.target.className = "fas fa-heart on";
-																} else {
-																	!!likes &&
-																		likes.map((item, i) => {
-																			if (item === found) {
-																				e.target.className = "fas fa-heart";
-																				actions.likesUpdate(i);
-																			}
-																		});
-																}
-															}}
-														/>
-													</button>
+												<div className="col-1 my-2">												
+													<ButtonFavoritos id={index.toString()} name={results[index].name}/>
 												</div>
 											</div>
 										</div>

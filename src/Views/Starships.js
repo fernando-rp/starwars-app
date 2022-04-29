@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../Store/appContext";
 
+
 import image0 from "../img/starships/0.jpeg"
 import image1 from "../img/starships/1.jpeg"
 import image2 from "../img/starships/2.jpeg"
@@ -13,17 +14,12 @@ import image7 from "../img/starships/7.jpeg"
 import image8 from "../img/starships/8.jpeg"
 import image9 from "../img/starships/9.jpeg"
 
+import ButtonFavoritos from "../Components/ButtonFavoritos";
+
 const Starships = () => {
-	const { store, actions } = useContext(Context);
+	const { store } = useContext(Context);
 	const { starships } = store;
 	const { results } = starships;
-
-	let { likes } = store;
-
-	function image(index) {
-		const image = `/starships/${index}.jpeg`;
-		return image;
-	}
 
     const obtainImage=(index)=> {
 
@@ -77,33 +73,7 @@ const Starships = () => {
 													</Link>
 												</div>
 												<div className="col-1 my-2">
-													<button type="button" className="btn btn-dark active">
-														<i
-															className={
-																likes.find(item => item === results[index].name)
-																	? "fas fa-heart on"
-																	: "fas fa-heart"
-															}
-															id={index}
-															onClick={e => {
-																const found = likes.find(
-																	element => element === results[index].name
-																);
-																if (found === undefined || found === null) {
-																	actions.addLikesS(e);
-																	e.target.className = "fas fa-heart on";
-																} else {
-																	!!likes &&
-																		likes.map((item, i) => {
-																			if (item === found) {
-																				actions.likesUpdate(i);
-																				e.target.className = "fas fa-heart";
-																			}
-																		});
-																}
-															}}
-														/>
-													</button>
+                                                    <ButtonFavoritos key={index.toString()} name={results[index].name}/>
 												</div>
 											</div>
 										</div>

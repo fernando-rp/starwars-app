@@ -37,9 +37,9 @@ const Navbar = () => {
 									Planetas|
 								</Link>
 							</li>
-							<li className="nav-item">
+							{/* <li className="nav-item"> */}
 									<div className="nav-link"> <LikesBox /> </div>
-							</li>
+							{/* </li> */}
 						</ul>
 					</div>
 				</div>

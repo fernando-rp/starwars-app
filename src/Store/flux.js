@@ -8,8 +8,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planet: "null",
 			character: "null",
 			starship: "null",
-			heart: "fas fa-heart",
-			likes: ["hola","hola2","hola3"]
+			classValue:"heart",
+			likes: []
 		},
 		actions: {
 			likesUpdate: i => {
@@ -18,31 +18,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ likes: likes });
 			},
 
-			addLikes: e => {
+			addLikes: (character) => {
 				const { likes } = getStore();
-				const { characters } = getStore();
-				const n = [e.target.id];
-				const name = characters.results[n].name;
-				const likes_update = likes.concat(name);
+				const likes_update = likes.concat(character);
 				setStore({ likes: likes_update });
-			},
-
-			addLikesP: e => {
-				const { likes } = getStore();
-				const { planets } = getStore();
-				const n = [e.target.id];
-				const name = planets.results[n].name;
-				const likes_update = likes.concat(name);
-				setStore({ likes: likes_update });
-			},
-
-			addLikesS: e => {
-				const { likes } = getStore();
-				const { starships } = getStore();
-				const n = [e.target.id];
-				const name = starships.results[n].name;
-				const likes_update = likes.concat(name);
-				setStore({ likes: likes_update });
+				
 			},
 
 			getCharacters: async () => {

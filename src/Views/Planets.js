@@ -13,18 +13,12 @@ import image7 from "../img/planets/7.jpeg"
 import image8 from "../img/planets/8.jpeg"
 import image9 from "../img/planets/9.jpeg"
 
+import ButtonFavoritos from "../Components/ButtonFavoritos";
 
 const Planets = () => {
-	const { store, actions } = useContext(Context);
+	const { store } = useContext(Context);
 	const { planets } = store;
 	const { results } = planets;
-
-	let { likes } = store;
-
-	function image(index) {
-		const image = `/planets/${index}.jpeg`;
-		return image;
-	}
 
     const obtainImage=(index)=> {
 
@@ -77,33 +71,7 @@ const Planets = () => {
 													</Link>
 												</div>
 												<div className="col-1 my-2">
-													<button type="button" className="btn btn-dark active">
-														<i
-															className={
-																likes.find(item => item === results[index].name)
-																	? "fas fa-heart on"
-																	: "fas fa-heart"
-															}
-															id={index}
-															onClick={e => {
-																const found = likes.find(
-																	element => element === results[index].name
-																);
-																if (found === undefined || found === null) {
-																	actions.addLikesP(e);
-																	e.target.className = "fas fa-heart on";
-																} else {
-																	!!likes &&
-																		likes.map((item, i) => {
-																			if (item === found) {
-																				actions.likesUpdate(i);
-																				e.target.className = "fas fa-heart";
-																			}
-																		});
-																}
-															}}
-														/>
-													</button>
+                                                    <ButtonFavoritos key={index.toString()} name={results[index].name}/>
 												</div>
 											</div>
 										</div>

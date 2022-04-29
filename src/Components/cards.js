@@ -28,9 +28,9 @@ const Cards = () => {
 						<div className="card-body">
 							<h5 className="card-title">Personajes</h5>
 							<p className="card-text ">
-								Descubre todos los personajes haciendo click en el siguiente link
+							La información y detalle de cada Personaje la encuentras haciendo click en el siguiente botón:
 							</p>
-							<Link to="/characters" className="btn btn-dark">
+							<Link to="/characters" className="btn expediente">
 								Ir a Personajes
 							</Link>
 						</div>
@@ -41,8 +41,8 @@ const Cards = () => {
 						<img src={Starship} className="card-img-top" alt="..." />
 						<div className="card-body">
 							<h5 className="card-title">Naves</h5>
-							<p className="card-text"> Descubre todas las naves haciendo click en el siguiente link</p>
-							<Link to="/starships" className="btn btn-dark">
+							<p className="card-text"> La información y detalle de cada Nave la encuentras haciendo click en el siguiente botón:</p>
+							<Link to="/starships" className="btn expediente">
 								Ir a Naves
 							</Link>
 						</div>
@@ -53,8 +53,8 @@ const Cards = () => {
 						<img src={Planets} className="card-img-top" alt="..." />
 						<div className="card-body">
 							<h5 className="card-title">Planetas</h5>
-							<p className="card-text">Descubre todos los planetas haciendo click en el siguiente link</p>
-							<Link to="/planets" className="btn btn-dark">
+							<p className="card-text">La información y detalle de cada Planeta la encuentras haciendo click en el siguiente botón:</p>
+							<Link to="/planets" className="btn expediente">
 								Ir a Planetas
 							</Link>
 						</div>
