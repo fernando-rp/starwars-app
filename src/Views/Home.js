@@ -1,7 +1,7 @@
 import React from "react";
 
 import Banner from "../Components/Banner";
-import Cards from "../Components/Cards";
+import Cards from "./Cards";
 
 const Home = () => {
 	return (
