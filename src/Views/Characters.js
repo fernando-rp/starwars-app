@@ -19,7 +19,6 @@ const Characters= ()=>{
 
     const { store } = useContext(Context);
 	const { characters } = store;
-	const { classValue } = store;
 	const { results } = characters;
 
 	const obtainImage=(index)=> {
@@ -46,7 +45,9 @@ const Characters= ()=>{
 			case '8':
 				imageCode=image8; break;
 			case '9':
-				imageCode=image9; break;	
+				imageCode=image9; break;
+			default:
+				console.log("Lo siento, no hay imagen");
 			
 		}
 

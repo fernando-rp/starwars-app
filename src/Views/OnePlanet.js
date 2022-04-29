@@ -49,6 +49,8 @@ const OnePlanet = () => {
 				imageCode=image8; break;
 			case '9':
 				imageCode=image9; break;
+            default:
+                console.log("Lo siento, no hay imagen");
                 	
 		}
         return (<img src={imageCode} className="card-img-top-s" alt="" />);

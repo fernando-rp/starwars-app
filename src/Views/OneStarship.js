@@ -49,6 +49,8 @@ const OneStarship = props => {
 				imageCode=image8; break;
 			case '17':
 				imageCode=image9; break;
+            default:
+                console.log("Lo siento, no hay imagen");
                 	
 		}
         return (<img src={imageCode} className="card-img-top-s" alt="" />);

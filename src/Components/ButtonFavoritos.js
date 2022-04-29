@@ -22,8 +22,6 @@ const ButtonFavoritos=(props)=>{
     if (found === undefined || found === null) {
         actions.addLikes(name);
         setClassValue("heart-touch");
-        // actions.classButtonFavorite("heart-touch")
-
 
     } else {
         !!likes &&
@@ -31,7 +29,6 @@ const ButtonFavoritos=(props)=>{
                 if (item === found) {
                     setClassValue("heart");
                     actions.likesUpdate(i);
-                    // actions.classButtonFavorite("heart")
                 }
             });
     }}
