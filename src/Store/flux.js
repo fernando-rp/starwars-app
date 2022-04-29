@@ -9,8 +9,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			character: "null",
 			starship: "null",
 			heart: "fas fa-heart",
-			likes: [],
-			titulo: "hola mundo 2"
+			likes: ["hola","hola2","hola3"]
 		},
 		actions: {
 			likesUpdate: i => {

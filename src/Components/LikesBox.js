@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../Store/appContext";
-import { Link } from "react-router-dom";
+import {BsTrash} from 'react-icons/bs'
 
 
 const LikesBox=()=>{
@@ -19,42 +19,41 @@ const LikesBox=()=>{
 	}
 
     return(
-        <div className="dropdown ">
-					<button
-						className="btn btn-dark dropdown-toggle"
-						type="button"
-						id="dropdownMenuButton"
-						data-toggle="dropdown"
-						aria-haspopup="true"
-						aria-expanded="false">
-						Favoritos
-						<span className="badge badge-light mx-2">{likes.length} </span>
-					</button>
-					<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						{!!likes &&
-							likes.map((item, index) => {
-								return (
-									<>
-										<div className="d-flex flex-row">
-											<div className="px-2">
-												<Link className="dropdown-item" to="#">
-													{item}
-												</Link>
-											</div>
-											<div className=" my-auto">
-												<i
-													key={index}
-													className="far fa-trash-alt"
-													title={item}
-													onClick={handleLikeBox}
-												/>
-											</div>
-										</div>
-									</>
-								);
-							})}
-					</div>
-				</div>
+
+
+        <div className="dropdown mx-2">
+            <button className="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Favoritos
+                <span className="badge badge-light mx-2">{likes.length} </span>
+            </button>
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                {!!likes &&
+                    likes.map((item, index) => {
+                        return (
+                            <>
+                                <div className="d-flex flex-row" key={index}>
+                                    <div className="px-2" >
+                                        <div className="dropdown-item">
+                                            {item}
+                                        </div>
+                                    </div>
+                                    <div className=" my-auto">
+                                        <i
+                                            type="button"
+                                            icon="fa-solid fa-trash"
+                                            className=""
+                                            onClick={handleLikeBox}
+                                            title={item}
+                                               
+                                        >x</i>
+                                    </div>
+                                </div>
+                            </>
+                        );
+                    })}
+            </div>
+        </div>
+
     )
 
 }

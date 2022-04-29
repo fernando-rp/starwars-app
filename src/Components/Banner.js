@@ -11,8 +11,8 @@ const Banner=()=>{
                     <div className="carousel-item active">
                         <img src={banner} className="img-banner d-block w-100" alt="..."/>
                         <div className="text-banner carousel-caption  d-md-block">
-                            <h1 className="title-banner">Ayuda al Mandaloriano</h1>
-                            <p className="subtitle-banner">Protege la información de esta APP</p>
+                            <h1 className="title-banner">La Misión del Mandaloriano</h1>
+                            <p className="subtitle-banner">"En búsqueda de la base de datos"</p>
                         </div>
                     </div>
                 

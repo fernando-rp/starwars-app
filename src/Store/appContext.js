@@ -21,7 +21,7 @@ const injectContext = PassedComponent => {
 			state.actions.getCharacters();
 			state.actions.getPlanets();
 			state.actions.getStarships();
-		});
+		},[]);
 
 		return (
 			<Context.Provider value={state}>
