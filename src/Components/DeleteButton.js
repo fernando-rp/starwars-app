@@ -14,9 +14,10 @@ const DeleteButton=(props)=>{
 			likes.map((item, i) => {
 				if (item === n) {
 					actions.likesUpdate(i);
-                    actions.classButtonFavorite("heart")
-                
+                    actions.classButtonFavorite("heart");
+                    
 				}
+                return null;
 			});
 	}
 

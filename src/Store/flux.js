@@ -8,7 +8,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planet: "null",
 			character: "null",
 			starship: "null",
-			classValue:"heart",
 			likes: []
 		},
 		actions: {

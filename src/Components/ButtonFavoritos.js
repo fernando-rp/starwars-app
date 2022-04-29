@@ -9,7 +9,7 @@ const ButtonFavoritos=(props)=>{
     const { store, actions } = useContext(Context);
 	const { likes } = store;
 
-    const [classValue,setClassValue]=useState("heart")
+    const [,setClassValue]=useState("heart")
 
     const addFavoritos=()=>{
 
@@ -30,6 +30,7 @@ const ButtonFavoritos=(props)=>{
                     setClassValue("heart");
                     actions.likesUpdate(i);
                 }
+                return null;
             });
     }}
 
